@@ -1,0 +1,9 @@
+.display {
+  height: 54px;
+  background-color: black;
+  border-radius: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 5px;
+  color: white;
+}
