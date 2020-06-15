@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.css";
 class App extends Component {
   state = {
     result: 0,
-    firstOperand: "",
-    secondOperand: "",
+    firstOperand: 0,
+    secondOperand: 0,
     operator: "",
     flag: true,
   };
@@ -29,13 +29,15 @@ class App extends Component {
     } else {
       if (this.state.flag) {
         let op1 = this.state.firstOperand;
-        op1 = op1 + value;
+        op1 = `${op1}${value}`;
+        op1 = parseInt(op1);
         this.setState({ firstOperand: op1, result: op1 });
       } else {
         let operator = this.state.operator;
         let op1 = this.state.firstOperand;
         let op2 = this.state.secondOperand;
-        op2 = op2 + value;
+        op2 = `${op2}${value}`;
+        op2 = parseInt(op2);
         this.setState({ secondOperand: op2, result: op1 + operator + op2 });
       }
     }
