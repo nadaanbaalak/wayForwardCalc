@@ -60,7 +60,7 @@ class App extends Component {
         this.setState({ result: opResult });
         break;
       case "/":
-        if (firstOperand === 0) {
+        if (secondOperand === 0) {
           this.setState({ result: 0 });
           break;
         }
